@@ -10,6 +10,12 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
+
+
+    @org.junit.Test
+    public void checkTest(){
+        assertTrue(true);
+    }
     /**
      * Create the test case
      *
