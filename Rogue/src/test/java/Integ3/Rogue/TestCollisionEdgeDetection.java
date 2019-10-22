@@ -7,6 +7,8 @@ import org.junit.Test;
 
 public class TestCollisionEdgeDetection {
 
+	
+	////TEST
 
     @Test
     public void truthTest(){
