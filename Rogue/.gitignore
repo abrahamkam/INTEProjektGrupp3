@@ -10,8 +10,13 @@
 #Projektfilter
 *.project
 
+<<<<<<< HEAD
 #prefs
 *.prefs
 
 #.idea dir
 /.idea/
+=======
+#Prefs
+*.pref
+>>>>>>> etest

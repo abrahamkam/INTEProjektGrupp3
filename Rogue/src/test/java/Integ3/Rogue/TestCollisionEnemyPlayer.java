@@ -9,67 +9,113 @@ public class TestCollisionEnemyPlayer {
 
     private int playerXCoordinate, playerYCoordinate, enemyXCoordinate, enemyYCoordinate;
 
-    ///Uppdatera koordinaterna så att de tar hänsyn till läng/bredd på spritesen
-	/*
-	@Test
-	public void testNoCollisionWithEnemy() {
+    ///Assuming that the total lengt of player is 100 (50 on each side of coordinate in the middle)
+		
 
-
-		playerXCoordinate = 100;
-		playerYCoordinate = 100;
-		enemyXCoordinate = 200;
-		enemyYCoordinate = 200;
-
-		assertFalse(Spelplan.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
-	}
-
+    /// LEFT SIDE
+    
 	@Test
 	public void testIsCollisionWithEnemyXLeft() {
 
 
 		playerXCoordinate = 100;
 		playerYCoordinate = 100;
-		enemyXCoordinate = 100;
-		enemyYCoordinate = 200;
+		enemyXCoordinate = 51;
+		enemyYCoordinate = 100;
 
-		assertTrue(Spelplan.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		assertTrue(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
 
 	}
+	
+	@Test
+	public void testNoCollisionWithEnemXLeft() {
 
+
+		playerXCoordinate = 100;
+		playerYCoordinate = 100;
+		enemyXCoordinate = 49;
+		enemyYCoordinate = 100;
+
+		assertFalse(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+	}
+
+	//// RIGHT SIDE
+	
 	@Test
 	public void testIsCollisionWithEnemyXRight() {
 
 
 		playerXCoordinate = 100;
 		playerYCoordinate = 100;
-		enemyXCoordinate = 100;
-		enemyYCoordinate = 200;
+		enemyXCoordinate = 149;
+		enemyYCoordinate = 100;
 
-		assertTrue(Spelplan.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		assertTrue(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
 
 	}
+	
+	@Test
+	public void testNoCollisionWithEnemXRight() {
 
+
+		playerXCoordinate = 100;
+		playerYCoordinate = 100;
+		enemyXCoordinate = 151;
+		enemyYCoordinate = 100;
+
+		assertFalse(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+	}
+
+	//// TOP
+	
 	@Test
 	public void testIsCollisionWithEnemyYTop() {
 
-		playerXCoordinate = 100;
+		playerXCoordinate = 120;
 		playerYCoordinate = 100;
-		enemyXCoordinate = 200;
-		enemyYCoordinate = 100;
+		enemyXCoordinate = 100;
+		enemyYCoordinate = 51;
 
-		assertTrue(Spelplan.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		assertTrue(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
 
 	}
+	
+	@Test
+	public void testNoCollisionWithEnemYTop() {
+
+
+		playerXCoordinate = 120;
+		playerYCoordinate = 100;
+		enemyXCoordinate = 100;
+		enemyYCoordinate = 49;
+
+		assertFalse(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+	}
+	
+	///// BOTTOM
+	
+	
 	@Test
 	public void testIsCollisionWithEnemyYBottom() {
 
-		playerXCoordinate = 100;
+		playerXCoordinate = 120;
 		playerYCoordinate = 100;
-		enemyXCoordinate = 200;
-		enemyYCoordinate = 100;
+		enemyXCoordinate = 100;
+		enemyYCoordinate = 149;
 
-		assertTrue(Spelplan.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		assertTrue(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
 
-	}*/
+	}
+	
+	@Test
+	public void testNoCollisionWithEnemYBottom() {
+
+		playerXCoordinate = 120;
+		playerYCoordinate = 100;
+		enemyXCoordinate = 100;
+		enemyYCoordinate = 151;
+
+		assertFalse(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+	}
 
 }
