@@ -1,1 +1,11 @@
 /target/
+
+#Classpath
+*.classpath
+
+#Settings
+/settings/
+*.setting
+
+#Projektfilter
+*.project
