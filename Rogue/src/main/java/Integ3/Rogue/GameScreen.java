@@ -2,8 +2,8 @@ package Integ3.Rogue;
 
 public class GameScreen {
 
-	protected static int gameWidth = 500;
-	protected static int gameHeight = 500;
+	private static int gameWidth = 500;
+	private static int gameHeight = 500;
 	
 	public static boolean isCollisionWithEdge(int xCoordinate, int yCoordinate) {
 		boolean isCollision = false;
@@ -30,6 +30,12 @@ public class GameScreen {
 		
 				return isCollision;
 	}
-	
-	
+
+	public int getGameWidth(){
+		return gameWidth;
+	}
+
+	public int getGameHeight(){
+		return gameHeight;
+	}
 }
