@@ -4,8 +4,11 @@
 *.classpath
 
 #Settings
-/settings/
+/.settings/
 *.setting
 
 #Projektfilter
 *.project
+
+#Prefs
+*.pref
