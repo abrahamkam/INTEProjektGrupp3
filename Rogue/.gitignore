@@ -9,3 +9,6 @@
 
 #Projektfilter
 *.project
+
+#prefs
+*.prefs
