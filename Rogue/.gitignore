@@ -12,3 +12,6 @@
 
 #prefs
 *.prefs
+
+#.idea dir
+/.idea/
