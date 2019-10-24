@@ -17,4 +17,12 @@ public class GameScreen {
     public Enemy getEnemy() {
         return enemy;
     }
+    
+    public void setPlayer(Player p) {
+    	this.player = p;
+    }
+    
+    public void setEnemy(Enemy e) {
+    	this.enemy = e;
+    }
 }

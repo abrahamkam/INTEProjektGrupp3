@@ -37,4 +37,8 @@ public class Main
     public GameScreen getScreen() {
         return screen;
     }
+    
+    public void setScreen(GameScreen gs) {
+    	this.screen = gs; 
+    }
 }
