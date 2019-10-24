@@ -1,7 +1,8 @@
 package Integ3.Rogue;
 
 public class GameScreen {
-
+	
+	//Assuming Gamescreen is 500x500
 	protected static int gameWidth = 500;
 	protected static int gameHeight = 500;
 	
