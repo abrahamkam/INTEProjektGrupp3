@@ -38,4 +38,5 @@ public class GameScreen {
 	public int getGameHeight(){
 		return gameHeight;
 	}
+
 }
