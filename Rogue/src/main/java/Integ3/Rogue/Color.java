@@ -26,23 +26,7 @@ public class Color extends Actor{
 	//	return true;
 	//}
 
-	public void setPlayerColor(String GREEN) {
-		this.color = GREEN;
-	}
-
-	public void setEnemtColor(String RED) {
-		this.color = RED;
-	}
-
-
-	public void getPlayerColor(String g) {
-		this.color = g;
-			
-	}
 	
-	public void getEnemyColor(String r) {
-		this.color = r;
-	}
 	
 			}
 	
