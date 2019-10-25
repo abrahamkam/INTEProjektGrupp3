@@ -3,8 +3,6 @@ package Integ3.Rogue;
 import static java.lang.Math.abs;
 
 public class Player extends Actor {
-
-
     private direction dir;
     enum direction {
         NORTH,
