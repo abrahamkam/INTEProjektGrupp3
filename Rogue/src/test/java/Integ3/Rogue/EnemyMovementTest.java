@@ -14,7 +14,6 @@ public class EnemyMovementTest {
         enemy = new Enemy(0,0,player);
         enemy.move();
         assertTrue(enemy.y == player.y);
-
     }
 
     @Test
