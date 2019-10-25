@@ -11,14 +11,9 @@ public class Color extends Actor{
 	
 	
 	public Color(int x, int y) {
-		super(x,y);
-		
+		super(x,y,50);
 	}
-	
-	
-	public Color() {
-		
-	}
+
 
 
 	//public boolean getColor() {

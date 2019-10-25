@@ -21,7 +21,7 @@ public class Main
 
     public void setupGame(){
         Player player = new Player(50,50);
-        screen = new GameScreen(player, new Enemy(20,20, player));
+        //screen = new GameScreen(player, new Enemy(20,20, player));
     }
 
     public void run(){

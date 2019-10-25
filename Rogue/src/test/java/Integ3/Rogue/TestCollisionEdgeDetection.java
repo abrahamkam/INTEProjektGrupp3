@@ -8,55 +8,76 @@ import org.junit.Test;
 public class TestCollisionEdgeDetection {
 
 
-    @Test
-    public void truthTest(){
-        assertTrue(true);
-    }
-
     private int xCoordinate, yCoordinate;
-    ///TEST HALLÅ
-    //Antar att spelplan är 500x500
-	/*
+   
+    //Assuming Gamescreen is 500x500
+	
+    ////////RIGHT SIDE
+    
 	@Test
 	public void testIsCollisionWithEdgeBigX() {
 
 
-		xCoordinate = 501;
+		xCoordinate = 500;
 		yCoordinate = 100;
-		assertTrue(Spelplan.isCollisionWithEdge(xCoordinate,yCoordinate));
+		assertTrue(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+	}
+	
+	@Test
+	public void testNoCollisionWithEdgeBigX() {
+		xCoordinate = 499;
+		yCoordinate = 100;
+		assertFalse(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
 	}
 
+	//// LEFT SIDE
+	
 	@Test
 	public void testIsCollisionWithEdgeSmallX() {
 
 
-		xCoordinate = -1;
+		xCoordinate = 0;
 		yCoordinate = 100;
-		assertTrue(Spelplan.isCollisionWithEdge(xCoordinate,yCoordinate));
+		assertTrue(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
 	}
+	
+	@Test
+	public void testNoCollisionWithEdgeSmallX() {
+		xCoordinate = 1;
+		yCoordinate = 100;
+		assertFalse(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+	}
+	
+	///BOTTOM SIDE
+	
 	@Test
 	public void testIsCollisionWithEdgeBigY() {
 		xCoordinate = 100;
-		yCoordinate = 501;
-		assertTrue(Spelplan.isCollisionWithEdge(xCoordinate,yCoordinate));
+		yCoordinate = 500;
+		assertTrue(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+	}
+	
+	@Test
+	public void testNoCollisionWithEdgeBigY() {
+		xCoordinate = 100;
+		yCoordinate = 499;
+		assertFalse(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
 	}
 
+	//TOP SIDE
+	
 	@Test
 	public void testIsCollisionWithEdgeSmallY() {
 		xCoordinate = 100;
-		yCoordinate = -1;
-		assertTrue(Spelplan.isCollisionWithEdge(xCoordinate,yCoordinate));
+		yCoordinate = 0;
+		assertTrue(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
 	}
 
 	@Test
-	public void testNoCollision() {
+	public void testNoCollisionWithEdgeSmallY() {
 		xCoordinate = 100;
-		yCoordinate = 100;
-		assertFalse(Spelplan.isCollisionWithEdge(xCoordinate,yCoordinate));
+		yCoordinate = 1;
+		assertFalse(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
 	}
 
-	/*@Test
-	public void testCollosionEdgeNull() {
-		assert()
-	}*/
 }

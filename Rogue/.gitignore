@@ -1,5 +1,3 @@
-/target/
-
 #Classpath
 *.classpath
 
@@ -12,3 +10,9 @@
 
 #prefs
 *.prefs
+
+#.idea dir
+/.idea/
+
+#Prefs
+*.pref

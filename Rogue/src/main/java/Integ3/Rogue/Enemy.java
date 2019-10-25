@@ -5,7 +5,7 @@ public class Enemy extends Actor{
     Player player;
 
     public Enemy(int x, int y, Player player) {
-        super(x,y);
+        super(x,y, 50);
         this.player = player;
     }
 
