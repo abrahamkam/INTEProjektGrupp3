@@ -2,33 +2,32 @@ package Integ3.Rogue;
 
 /**
  * Hello world!
- *
  */
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Main
-{
+public class Main extends JFrame {
     private int score;
     private GameScreen screen;
-    public static void main( String[] args )
-    {
+
+    public static void main(String[] args) {
         Main main = new Main();
         main.setupGame();
         main.run();
 
     }
 
-    public void inputHandling(){
-
+    public void inputHandling(KeyEvent e) {
     }
 
-    public void setupGame(){
-        screen = new GameScreen(50,50,10,10);
+    public void setupGame() {
+        screen = new GameScreen(50, 50, 10, 10);
     }
 
-    public void run(){
-        while (true){
+    public void run() {
+        while (true) {
 
         }
     }
@@ -40,8 +39,8 @@ public class Main
     public GameScreen getScreen() {
         return screen;
     }
-    
+
     public void setScreen(GameScreen gs) {
-    	this.screen = gs; 
+        this.screen = gs;
     }
 }

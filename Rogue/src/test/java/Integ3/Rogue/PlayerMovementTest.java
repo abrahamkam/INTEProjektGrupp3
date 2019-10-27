@@ -9,12 +9,6 @@ public class PlayerMovementTest {
     Player player = new Player(0,0);
 
     @Test
-    public void trueTest() {
-        assertTrue(true);
-    }
-
-
-    @Test
     public void playerMoveUpTest() {
         int oldX = player.getX();
         int oldY = player.getY();
