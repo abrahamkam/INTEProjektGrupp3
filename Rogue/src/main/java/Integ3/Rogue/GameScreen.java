@@ -2,42 +2,53 @@ package Integ3.Rogue;
 
 public class GameScreen {
 
-	private static int gameWidth = 500;
-	private static int gameHeight = 500;
+    private static int gameWidth = 500;
+    private static int gameHeight = 500;
+    private static Enemy enemy;
+    private static Player player;
 
-	public static boolean isCollisionWithEdge(int xCoordinate, int yCoordinate) {
-		boolean isCollision = false;
+    public GameScreen(Player player, Enemy enemy) {
+        this.player = player;
+        this.enemy = enemy;
+    }
 
-		if(xCoordinate >= gameWidth || xCoordinate <= 0)
-			isCollision = true;
+    public static boolean isCollisionWithEdge(int xCoordinate, int yCoordinate) {
+        boolean isCollision = false;
 
-		if(yCoordinate >= gameHeight || yCoordinate <= 0)
-			isCollision = true;
+        if (xCoordinate >= gameWidth || xCoordinate <= 0)
+            isCollision = true;
+
+        if (yCoordinate >= gameHeight || yCoordinate <= 0)
+            isCollision = true;
 
 
-		return isCollision;
-	}
+        return isCollision;
+    }
 
-	public static boolean isCollisionWithEnemy(int playerXCoordinate, int playerYCoordinate, int enemyXCoordinate, int enemyYCoordinate) {
-		boolean isCollision = false;
+    public static boolean isCollisionWithEnemy(int playerXCoordinate, int playerYCoordinate, int enemyXCoordinate, int enemyYCoordinate) {
+        boolean isCollision = false;
 
-		//Hårdkodad tills vidare (avstånd mellan mitten koordinat och varje kant för spelare
-		int playerLength = 50;
+        //Hårdkodad tills vidare (avstånd mellan mitten koordinat och varje kant för spelare
+        int playerLength = 50;
 
-		if((enemyXCoordinate > (playerXCoordinate - playerLength)) && (enemyXCoordinate < (playerXCoordinate + playerLength)))
-			if((enemyYCoordinate > (playerYCoordinate - playerLength)) && (enemyYCoordinate < (playerYCoordinate + playerLength)))
-				isCollision = true;
+        if ((enemyXCoordinate > (playerXCoordinate - playerLength)) && (enemyXCoordinate < (playerXCoordinate + playerLength)))
+            if ((enemyYCoordinate > (playerYCoordinate - playerLength)) && (enemyYCoordinate < (playerYCoordinate + playerLength)))
+                isCollision = true;
 
-				return isCollision;
-	}
+        return isCollision;
+    }
 
-	public int getGameWidth(){
-		return gameWidth;
-	}
+    public static void moveEnemy() {
 
-	public int getGameHeight(){
-		return gameHeight;
-	}
+    }
+
+    public int getGameWidth() {
+        return gameWidth;
+    }
+
+    public int getGameHeight() {
+        return gameHeight;
+    }
 
 }
 

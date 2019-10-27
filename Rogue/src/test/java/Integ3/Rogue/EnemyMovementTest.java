@@ -11,31 +11,36 @@ public class EnemyMovementTest {
     @Test
     public void enemyMoveNorthTest(){
         player = new Player(0,1);
-        enemy = new Enemy(0,0,player);
-        enemy.move();
+        enemy = new Enemy(0,0);
+        GameScreen screen = new GameScreen(player,enemy);
+        screen.moveEnemy();
         assertTrue(enemy.y == player.y);
     }
 
     @Test
     public void enemyMoveSouthTest(){
         player = new Player(0,-1);
-        enemy = new Enemy(0,0,player);
-        enemy.move();
+        enemy = new Enemy(0,0);
+        GameScreen screen = new GameScreen(player,enemy);
+        screen.moveEnemy();
         assertTrue(enemy.y == player.y);
     }
 
     @Test
     public void enemyMoveEastTest(){
         player = new Player(1,0);
-        enemy = new Enemy(0,0,player);
-        enemy.move();
+        enemy = new Enemy(0,0);
+        GameScreen screen = new GameScreen(player,enemy);
+        screen.moveEnemy();
         assertTrue(enemy.x == player.x);
     }
+
     @Test
     public void enemyMoveWestTest(){
         player = new Player(-1,0);
-        enemy = new Enemy(0,0,player);
-        enemy.move();
+        enemy = new Enemy(0,0);
+        GameScreen screen = new GameScreen(player,enemy);
+        screen.moveEnemy();;
         assertTrue(enemy.x == player.x);
     }
 
@@ -44,30 +49,34 @@ public class EnemyMovementTest {
     @Test
     public void moveNorthEastTest(){
         player = new Player(1,1);
-        enemy = new Enemy(0,0,player);
-        enemy.move();
+        enemy = new Enemy(0,0);
+        GameScreen screen = new GameScreen(player,enemy);
+        screen.moveEnemy();
         assertTrue((enemy.y == player.y) && (enemy.x == player.x));
     }
 
     @Test
     public void moveNorthWestTest(){
         player = new Player(-1,1);
-        enemy = new Enemy(0,0,player);
-        enemy.move();
+        enemy = new Enemy(0,0);
+        GameScreen screen = new GameScreen(player,enemy);
+        screen.moveEnemy();
         assertTrue((enemy.y == player.y) && (enemy.x == player.x));
     }
     @Test
     public void moveSouthEastTest(){
         player = new Player(1,-1);
-        enemy = new Enemy(0,0,player);
-        enemy.move();
+        enemy = new Enemy(0,0);
+        GameScreen screen = new GameScreen(player,enemy);
+        screen.moveEnemy();
         assertTrue((enemy.y == player.y) && (enemy.x == player.x));
     }
     @Test
     public void moveSouthWestTest(){
         player = new Player(-1,-1);
-        enemy = new Enemy(0,0,player);
-        enemy.move();
+        enemy = new Enemy(0,0);
+        GameScreen screen = new GameScreen(player,enemy);
+        screen.moveEnemy();
         assertTrue((enemy.y == player.y) && (enemy.x == player.x));
     }
 }
