@@ -39,7 +39,17 @@ public class GameScreen {
     }
 
     public static void moveEnemy() {
+        if (player.getX() > enemy.getX()) {
+            enemy.move(1,0);
+        } else if (player.getX() < enemy.getX()) {
+            enemy.move(-1,0);
+        }
 
+        if (player.getY() > enemy.getY()) {
+            enemy.move(0,1);
+        } else if (player.getY() < enemy.getY()) {
+            enemy.move(0,-1);
+        }
     }
 
     public int getGameWidth() {

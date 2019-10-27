@@ -10,7 +10,8 @@ public abstract class Actor {
     }
 
     public void move(int dx,int dy){
-
+        this.x += dx;
+        this.y += dy;
     }
 
     public int getY() {
