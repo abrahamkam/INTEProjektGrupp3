@@ -1,6 +1,7 @@
 package Integ3.Rogue;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class EnemyMovementTest {
@@ -9,74 +10,82 @@ public class EnemyMovementTest {
 
     //Testing cardinal directions
     @Test
-    public void enemyMoveNorthTest(){
-        player = new Player(0,1);
-        enemy = new Enemy(0,0);
-        GameScreen screen = new GameScreen(player,enemy);
+    public void enemyMoveNorthTest() {
+
+        GameScreen screen = new GameScreen(0, 1, 0, 0);
+        player = screen.getPlayer();
+        enemy = screen.getEnemy();
         screen.moveEnemy();
-        assertTrue(enemy.y == player.y);
+        assertEquals(enemy.getY(),player.getY());
     }
 
     @Test
-    public void enemyMoveSouthTest(){
-        player = new Player(0,-1);
-        enemy = new Enemy(0,0);
-        GameScreen screen = new GameScreen(player,enemy);
+    public void enemyMoveSouthTest() {
+        GameScreen screen = new GameScreen(0, -1,0, 0);
+        player = screen.getPlayer();
+        enemy = screen.getEnemy();
+
         screen.moveEnemy();
-        assertTrue(enemy.y == player.y);
+        assertTrue(enemy.getY() == player.getY());
     }
 
     @Test
-    public void enemyMoveEastTest(){
-        player = new Player(1,0);
-        enemy = new Enemy(0,0);
-        GameScreen screen = new GameScreen(player,enemy);
+    public void enemyMoveEastTest() {
+        GameScreen screen = new GameScreen(1, 0,0, 0);
+        player = screen.getPlayer();
+        enemy = screen.getEnemy();
         screen.moveEnemy();
-        assertTrue(enemy.x == player.x);
+        assertTrue(enemy.getX() == player.getX());
     }
 
     @Test
-    public void enemyMoveWestTest(){
-        player = new Player(-1,0);
-        enemy = new Enemy(0,0);
-        GameScreen screen = new GameScreen(player,enemy);
-        screen.moveEnemy();;
-        assertTrue(enemy.x == player.x);
+    public void enemyMoveWestTest() {
+        GameScreen screen = new GameScreen(-1, 0,0, 0);
+        player = screen.getPlayer();
+        enemy = screen.getEnemy();
+
+        screen.moveEnemy();
+        ;
+        assertTrue(enemy.getX() == player.getX());
     }
 
     //Test combo directions
 
     @Test
-    public void moveNorthEastTest(){
-        player = new Player(1,1);
-        enemy = new Enemy(0,0);
-        GameScreen screen = new GameScreen(player,enemy);
+    public void moveNorthEastTest() {
+        GameScreen screen = new GameScreen(1, 1,0, 0);
+        player = screen.getPlayer();
+        enemy = screen.getEnemy();
         screen.moveEnemy();
-        assertTrue((enemy.y == player.y) && (enemy.x == player.x));
+        assertTrue((enemy.getY() == player.getY()) && (enemy.getX() == player.getX()));
     }
 
     @Test
-    public void moveNorthWestTest(){
-        player = new Player(-1,1);
-        enemy = new Enemy(0,0);
-        GameScreen screen = new GameScreen(player,enemy);
+    public void moveNorthWestTest() {
+        GameScreen screen = new GameScreen(-1, 1,0, 0);
+        player = screen.getPlayer();
+        enemy = screen.getEnemy();
         screen.moveEnemy();
-        assertTrue((enemy.y == player.y) && (enemy.x == player.x));
+        assertTrue((enemy.getY() == player.getY()) && (enemy.getX() == player.getX()));
     }
+
     @Test
-    public void moveSouthEastTest(){
-        player = new Player(1,-1);
-        enemy = new Enemy(0,0);
-        GameScreen screen = new GameScreen(player,enemy);
+    public void moveSouthEastTest() {
+        GameScreen screen = new GameScreen(1, -1,0, 0);
+        player = screen.getPlayer();
+        enemy = screen.getEnemy();
+
         screen.moveEnemy();
-        assertTrue((enemy.y == player.y) && (enemy.x == player.x));
+        assertTrue((enemy.getY() == player.getY()) && (enemy.getX() == player.getX()));
     }
+
     @Test
-    public void moveSouthWestTest(){
-        player = new Player(-1,-1);
-        enemy = new Enemy(0,0);
-        GameScreen screen = new GameScreen(player,enemy);
+    public void moveSouthWestTest() {
+        GameScreen screen = new GameScreen(-1, -1,0, 0);
+        player = screen.getPlayer();
+        enemy = screen.getEnemy();
+
         screen.moveEnemy();
-        assertTrue((enemy.y == player.y) && (enemy.x == player.x));
+        assertTrue((enemy.getY() == player.getY()) && (enemy.getX() == player.getX()));
     }
 }
