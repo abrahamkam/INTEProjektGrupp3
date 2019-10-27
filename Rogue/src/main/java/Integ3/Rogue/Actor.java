@@ -1,7 +1,7 @@
 package Integ3.Rogue;
 
 public abstract class Actor {
-    protected int x,y, length;
+    private int x,y, length;
 
     public Actor(int x, int y, int length){
         this.x = x;

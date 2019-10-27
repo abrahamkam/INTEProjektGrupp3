@@ -7,9 +7,13 @@ public class GameScreen {
     private static Enemy enemy;
     private static Player player;
 
-    public GameScreen(Player player, Enemy enemy) {
-        this.player = player;
-        this.enemy = enemy;
+    public GameScreen(int playerX, int playerY, int enemyX, int enemyY) {
+        spawn(playerX, playerY, enemyX, enemyY);
+    }
+
+    private void spawn(int playerX, int playerY, int enemyX, int enemyY) {
+        this.player = new Player(playerX, playerY);
+        this.enemy = new Enemy(enemyX, enemyY);
     }
 
     public static boolean isCollisionWithEdge(int xCoordinate, int yCoordinate) {
@@ -40,15 +44,14 @@ public class GameScreen {
 
     public static void moveEnemy() {
         if (player.getX() > enemy.getX()) {
-            enemy.move(1,0);
+            enemy.move(1, 0);
         } else if (player.getX() < enemy.getX()) {
-            enemy.move(-1,0);
+            enemy.move(-1, 0);
         }
-
         if (player.getY() > enemy.getY()) {
-            enemy.move(0,1);
+            enemy.move(0, 1);
         } else if (player.getY() < enemy.getY()) {
-            enemy.move(0,-1);
+            enemy.move(0, -1);
         }
     }
 
@@ -60,5 +63,12 @@ public class GameScreen {
         return gameHeight;
     }
 
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static Enemy getEnemy() {
+        return enemy;
+    }
 }
 
