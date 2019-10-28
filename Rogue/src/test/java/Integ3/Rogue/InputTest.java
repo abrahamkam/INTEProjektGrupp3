@@ -1,43 +1,57 @@
 package Integ3.Rogue;
 
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyEvent;
 
 import static java.awt.event.KeyEvent.*;
+import static org.mockito.Mockito.*;
 
 public class InputTest {
 
 
     @Test
-    public void wTest() throws AWTException{
+    public void wTest(){
         Main main = new Main();
+        Main mainspy = spy(main);
+        mainspy.setupGame();
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
                 .currentTimeMillis(), 0, VK_W, 'w');
-        main.inputHandling(key);
+        mainspy.inputHandling(key);
+        verify(mainspy).getScreen().getPlayer().move(0,1);
     }
+
     @Test
-    public void sTest() throws AWTException{
+    public void sTest(){
         Main main = new Main();
+        Main mainspy = spy(main);
+        mainspy.setupGame();
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
                 .currentTimeMillis(), 0, VK_S, 's');
-        main.inputHandling(key);
+        mainspy.inputHandling(key);
+        verify(mainspy).getScreen().getPlayer().move(0,-1);
     }
     @Test
-    public void dTest() throws AWTException{
+    public void dTest(){
         Main main = new Main();
+        Main mainspy = spy(main);
+        mainspy.setupGame();
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
                 .currentTimeMillis(), 0, VK_D, 'd');
-        main.inputHandling(key);
+        mainspy.inputHandling(key);
+        verify(mainspy).getScreen().getPlayer().move(1,1);
     }
     @Test
-    public void aTest() throws AWTException{
+    public void aTest(){
         Main main = new Main();
+        Main mainspy = spy(main);
+        mainspy.setupGame();
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
                 .currentTimeMillis(), 0, VK_A, 'a');
-        main.inputHandling(key);
+        mainspy.inputHandling(key);
+        verify(mainspy).getScreen().getPlayer().move(-1,0);
     }
 
 }

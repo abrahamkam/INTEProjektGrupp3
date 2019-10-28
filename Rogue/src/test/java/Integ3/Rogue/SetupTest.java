@@ -26,6 +26,11 @@ public class SetupTest {
         assertEquals(screen.getEnemy().getY(),enemyY);
 
     }
+    public void playerNotNullTest(){
+        Main main = new Main();
+        main.setupGame();
+        assertNotNull(main.getScreen().getPlayer());
+    }
 
     @Test
     public void enemyNotNullTest() {
