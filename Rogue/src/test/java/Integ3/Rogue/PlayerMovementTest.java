@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class PlayerMovementTest {
 
-    Player player = new Player(0,0);
+    Player player = new Player(0, 0);
 
     @Test
     public void playerMoveUpTest() {
@@ -24,7 +24,7 @@ public class PlayerMovementTest {
         int oldY = player.getY();
 
         player.move(0, -1);
-        assertEquals((oldY-1), player.getY());
+        assertEquals((oldY - 1), player.getY());
         assertEquals(oldX, player.getX());
     }
 
