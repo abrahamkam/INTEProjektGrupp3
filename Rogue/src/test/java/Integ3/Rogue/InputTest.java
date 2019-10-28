@@ -58,7 +58,6 @@ public class InputTest {
     @Test
     public void spaceTest(){
         Main main = new Main();
-        GameScreen screen = main.getScreen();
         Main mainspy = spy(main);
         mainspy.setupGame();
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System

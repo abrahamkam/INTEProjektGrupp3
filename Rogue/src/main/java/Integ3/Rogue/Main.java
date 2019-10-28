@@ -24,6 +24,8 @@ public class Main {
             case KeyEvent.VK_A:
                 getScreen().getPlayer().move(-1, 0);
                 break;
+            case KeyEvent.VK_SPACE:
+                getScreen().getPlayer().shoot(screen.getEnemy());
         }
     }
 
