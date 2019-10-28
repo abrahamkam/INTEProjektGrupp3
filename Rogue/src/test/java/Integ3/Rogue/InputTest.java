@@ -55,5 +55,16 @@ public class InputTest {
         mainspy.inputHandling(key);
         verify(mainspy).getScreen().getPlayer().move(-1, 0);
     }
+    @Test
+    public void spaceTest(){
+        Main main = new Main();
+        GameScreen screen = main.getScreen();
+        Main mainspy = spy(main);
+        mainspy.setupGame();
+        KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
+                .currentTimeMillis(), 0, VK_SPACE, 'a');
+        mainspy.inputHandling(key);
+        verify(mainspy).getScreen().getPlayer().shoot(mainspy.getScreen().getEnemy());
+    }
 
 }
