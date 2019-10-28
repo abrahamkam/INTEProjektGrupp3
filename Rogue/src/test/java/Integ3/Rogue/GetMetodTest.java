@@ -37,6 +37,13 @@ public class GetMetodTest {
 		int s = score.getPlayerScore();
 		assertEquals(100,s);
 	}
+	
+	@Test
+	public void getHeightTest() {
+	    int width =gameScreen.getGameHeight();
+	    AssertEquals(300,width);
+	  	
+	}
 
 
 	private void AssertEquals(int i, int a) {
