@@ -2,10 +2,10 @@ package Integ3.Rogue;
 
 public class GameScreen {
 
-    private static int gameWidth = 500;
-    private static int gameHeight = 500;
-    private static Enemy enemy;
-    private static Player player;
+    private static final int gameWidth = 500;
+    private static final int gameHeight = 500;
+    private Enemy enemy;
+    private Player player;
 
     public GameScreen(int playerX, int playerY, int enemyX, int enemyY) {
         spawn(playerX, playerY, enemyX, enemyY);
@@ -42,7 +42,7 @@ public class GameScreen {
         return isCollision;
     }
 
-    public static void moveEnemy() {
+    public void moveEnemy() {
         if (player.getX() > enemy.getX()) {
             enemy.move(1, 0);
         } else if (player.getX() < enemy.getX()) {
@@ -55,20 +55,20 @@ public class GameScreen {
         }
     }
 
-    public int getGameWidth() {
-        return gameWidth;
-    }
-
-    public int getGameHeight() {
-        return gameHeight;
-    }
-
-    public static Player getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 
-    public static Enemy getEnemy() {
+    public Enemy getEnemy() {
         return enemy;
+    }
+    
+    public int getGameWidth() {
+        return gameWidth;
+    }
+    
+    public int getGameHeight() {
+        return gameHeight;
     }
 }
 

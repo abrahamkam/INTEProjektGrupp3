@@ -9,14 +9,14 @@ public class TestCollisionEdgeDetection {
 
 
     private int xCoordinate, yCoordinate;
-   
     //Assuming Gamescreen is 500x500
 	
     ////////RIGHT SIDE
     
 	@Test
 	public void testIsCollisionWithEdgeBigX() {
-
+		
+		
 
 		xCoordinate = 500;
 		yCoordinate = 100;

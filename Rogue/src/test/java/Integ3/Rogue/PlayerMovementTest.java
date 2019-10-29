@@ -18,7 +18,7 @@ public class PlayerMovementTest {
     public void playerMoveUpTest() {
         int oldX = player.getX();
         int oldY = player.getY();
-
+        
         player.move(0, 1);
         assertEquals((oldY + 1), player.getY());
         assertEquals(oldX, player.getX());
