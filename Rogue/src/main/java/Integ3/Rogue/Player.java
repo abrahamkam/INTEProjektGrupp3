@@ -15,18 +15,14 @@ public class Player extends Actor {
         super(x,y, 50);
     }
 
-    public void move(int dx, int dy) {
-        y += dy;
-        x += dx;
-    }
 
     public void setDirection(direction dir){
         this.dir = dir;
     }
 
     public boolean shoot(Enemy e){
-        int dx = this.x - e.getX();
-        int dy = this.y - e.getY();
+        int dx = this.getX() - e.getX();
+        int dy = this.getY() - e.getY();
         int w = e.getLength()/2;
         int absDx = abs(dx);
         int absDy = abs(dy);

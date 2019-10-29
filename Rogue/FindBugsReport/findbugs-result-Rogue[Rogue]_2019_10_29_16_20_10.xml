@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://findbugs.sourceforge.net/xsl/default.xsl"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1572362167326" analysisTimestamp="1572362166609" release="">
+  <Project projectName="Rogue[Rogue]">
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Player$direction.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Enemy.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Player.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Main.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/GameScreen.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Actor.class</Jar>
+    <AuxClasspathEntry>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes</AuxClasspathEntry>
+    <SrcDir>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/src/main/java</SrcDir>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="4a1853d59fb3e1a347df8fd59400006b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field Integ3.Rogue.GameScreen.enemy from instance method Integ3.Rogue.GameScreen.spawn(int, int, int, int)</LongMessage>
+    <Class classname="Integ3.Rogue.GameScreen" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java">
+        <Message>In GameScreen.java</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.GameScreen</Message>
+    </Class>
+    <Method classname="Integ3.Rogue.GameScreen" name="spawn" signature="(IIII)V" isStatic="false" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" start="15" end="17" startBytecode="0" endBytecode="119" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java"/>
+      <Message>In method Integ3.Rogue.GameScreen.spawn(int, int, int, int)</Message>
+    </Method>
+    <Field classname="Integ3.Rogue.GameScreen" name="enemy" signature="LInteg3/Rogue/Enemy;" isStatic="true" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java">
+        <Message>In GameScreen.java</Message>
+      </SourceLine>
+      <Message>Field Integ3.Rogue.GameScreen.enemy</Message>
+    </Field>
+    <SourceLine classname="Integ3.Rogue.GameScreen" primary="true" start="16" end="16" startBytecode="26" endBytecode="26" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java">
+      <Message>At GameScreen.java:[line 16]</Message>
+    </SourceLine>
+    <SourceLine classname="Integ3.Rogue.GameScreen" primary="true" start="16" end="16" startBytecode="26" endBytecode="26" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java">
+      <Message>At GameScreen.java:[line 16]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="cf8ea8672ea9a501bdaa001de2111d66" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field Integ3.Rogue.GameScreen.player from instance method Integ3.Rogue.GameScreen.spawn(int, int, int, int)</LongMessage>
+    <Class classname="Integ3.Rogue.GameScreen" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java">
+        <Message>In GameScreen.java</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.GameScreen</Message>
+    </Class>
+    <Method classname="Integ3.Rogue.GameScreen" name="spawn" signature="(IIII)V" isStatic="false" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" start="15" end="17" startBytecode="0" endBytecode="119" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java"/>
+      <Message>In method Integ3.Rogue.GameScreen.spawn(int, int, int, int)</Message>
+    </Method>
+    <Field classname="Integ3.Rogue.GameScreen" name="player" signature="LInteg3/Rogue/Player;" isStatic="true" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java">
+        <Message>In GameScreen.java</Message>
+      </SourceLine>
+      <Message>Field Integ3.Rogue.GameScreen.player</Message>
+    </Field>
+    <SourceLine classname="Integ3.Rogue.GameScreen" primary="true" start="15" end="15" startBytecode="11" endBytecode="11" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java">
+      <Message>At GameScreen.java:[line 15]</Message>
+    </SourceLine>
+    <SourceLine classname="Integ3.Rogue.GameScreen" primary="true" start="15" end="15" startBytecode="11" endBytecode="11" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="Integ3/Rogue/GameScreen.java">
+      <Message>At GameScreen.java:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UC_USELESS_VOID_METHOD" priority="3" rank="20" abbrev="UC" category="STYLE" instanceHash="e56cca590d59c270ee6142f9c12cd0f5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Useless non-empty void method</ShortMessage>
+    <LongMessage>Method Integ3.Rogue.Main.run() seems to be useless</LongMessage>
+    <Class classname="Integ3.Rogue.Main" primary="true">
+      <SourceLine classname="Integ3.Rogue.Main" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="Integ3/Rogue/Main.java">
+        <Message>In Main.java</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.Main</Message>
+    </Class>
+    <Method classname="Integ3.Rogue.Main" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Integ3.Rogue.Main" start="31" end="31" startBytecode="0" endBytecode="53" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="Integ3/Rogue/Main.java"/>
+      <Message>In method Integ3.Rogue.Main.run()</Message>
+    </Method>
+    <SourceLine classname="Integ3.Rogue.Main" primary="true" start="31" end="31" startBytecode="0" endBytecode="0" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="Integ3/Rogue/Main.java">
+      <Message>At Main.java:[line 31]</Message>
+    </SourceLine>
+    <SourceLine classname="Integ3.Rogue.Main" primary="true" start="31" end="31" startBytecode="0" endBytecode="0" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="Integ3/Rogue/Main.java">
+      <Message>At Main.java:[line 31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="3" rank="15" abbrev="UwF" category="CORRECTNESS" instanceHash="25a53bd006f4a28b24486677a057c8b4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unwritten field</ShortMessage>
+    <LongMessage>Unwritten field: Integ3.Rogue.Main.score</LongMessage>
+    <Class classname="Integ3.Rogue.Main" primary="true">
+      <SourceLine classname="Integ3.Rogue.Main" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="Integ3/Rogue/Main.java">
+        <Message>In Main.java</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.Main</Message>
+    </Class>
+    <Field classname="Integ3.Rogue.Main" name="score" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="Integ3.Rogue.Main" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="Integ3/Rogue/Main.java">
+        <Message>In Main.java</Message>
+      </SourceLine>
+      <Message>Field Integ3.Rogue.Main.score</Message>
+    </Field>
+    <SourceLine classname="Integ3.Rogue.Main" primary="true" start="37" end="37" startBytecode="1" endBytecode="1" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="Integ3/Rogue/Main.java">
+      <Message>At Main.java:[line 37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="1e8249b3f2c5a700a57129da99c91165" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names should start with an upper case letter</ShortMessage>
+    <LongMessage>The class name Integ3.Rogue.Player$direction doesn&apos;t start with an upper case letter</LongMessage>
+    <Class classname="Integ3.Rogue.Player$direction" primary="true">
+      <SourceLine classname="Integ3.Rogue.Player$direction" start="7" end="11" sourcefile="Player.java" sourcepath="Integ3/Rogue/Player.java" relSourcepath="Integ3/Rogue/Player.java">
+        <Message>At Player.java:[lines 7-11]</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.Player$direction</Message>
+    </Class>
+    <SourceLine classname="Integ3.Rogue.Player$direction" start="7" end="11" sourcefile="Player.java" sourcepath="Integ3/Rogue/Player.java" relSourcepath="Integ3/Rogue/Player.java" synthetic="true">
+      <Message>At Player.java:[lines 7-11]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_CLASS_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Class names should start with an upper case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UWF_UNWRITTEN_FIELD" abbrev="UwF" category="CORRECTNESS">
+    <ShortDescription>Unwritten field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never written.&nbsp; All reads of it will return the default
+value. Check for errors (should it have been initialized?), or remove it if it is useless.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UC_USELESS_VOID_METHOD" abbrev="UC" category="STYLE">
+    <ShortDescription>Useless non-empty void method</ShortDescription>
+    <Details><![CDATA[
+
+<p>Our analysis shows that this non-empty void method does not actually perform any useful work.
+Please check it: probably there's a mistake in its code or its body can be fully removed.
+</p>
+<p>We are trying to reduce the false positives as much as possible, but in some cases this warning might be wrong.
+Common false-positive cases include:</p>
+<p>- The method is intended to trigger loading of some class which may have a side effect.</p>
+<p>- The method is intended to implicitly throw some obscure exception.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="UC">
+    <Description>Useless code</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 29 Oct 2019 16:07:20 +0100" total_classes="6" referenced_classes="6" total_bugs="5" total_size="138" num_packages="1" java_version="11.0.4" vm_version="11.0.4+10-b304.69" cpu_seconds="60.02" clock_seconds="244.07" peak_mbytes="874.42" alloc_mbytes="2014.75" gc_seconds="0.16" priority_3="5">
+    <FileStats path="Integ3/Rogue/Actor.java" bugCount="0" size="20"/>
+    <FileStats path="Integ3/Rogue/Enemy.java" bugCount="0" size="4"/>
+    <FileStats path="Integ3/Rogue/GameScreen.java" bugCount="2" size="48" bugHash="5fa6dda269ece3a74eac08398ffddf7d"/>
+    <FileStats path="Integ3/Rogue/Main.java" bugCount="2" size="24" bugHash="c122e2d55758480602caf338634df409"/>
+    <FileStats path="Integ3/Rogue/Player.java" bugCount="1" size="42" bugHash="c9d40ac77f083f97abe488fe59264237"/>
+    <PackageStats package="Integ3.Rogue" total_bugs="5" total_types="6" total_size="138" priority_3="5">
+      <ClassStats class="Integ3.Rogue.Actor" sourceFile="Actor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.Enemy" sourceFile="Enemy.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.GameScreen" sourceFile="GameScreen.java" interface="false" size="48" bugs="2" priority_3="2"/>
+      <ClassStats class="Integ3.Rogue.Main" sourceFile="Main.java" interface="false" size="24" bugs="2" priority_3="2"/>
+      <ClassStats class="Integ3.Rogue.Player" sourceFile="Player.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.Player$direction" sourceFile="Player.java" interface="false" size="15" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="228" invocations="2" avgMicrosecondsPerInvocation="114351" maxMicrosecondsPerInvocation="129430" standardDeviationMircosecondsPerInvocation="15075"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="108" invocations="31" avgMicrosecondsPerInvocation="3484" maxMicrosecondsPerInvocation="90923" standardDeviationMircosecondsPerInvocation="16001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="58" invocations="149" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="22414" standardDeviationMircosecondsPerInvocation="1923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDerefsInvolvingNonShortCircuitEvaluation" totalMilliseconds="46" invocations="6" avgMicrosecondsPerInvocation="7670" maxMicrosecondsPerInvocation="45418" standardDeviationMircosecondsPerInvocation="16881"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="33" invocations="31" avgMicrosecondsPerInvocation="1089" maxMicrosecondsPerInvocation="24770" standardDeviationMircosecondsPerInvocation="4334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="21" invocations="13" avgMicrosecondsPerInvocation="1631" maxMicrosecondsPerInvocation="20153" standardDeviationMircosecondsPerInvocation="5347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="18" invocations="31" avgMicrosecondsPerInvocation="581" maxMicrosecondsPerInvocation="12699" standardDeviationMircosecondsPerInvocation="2222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="16" invocations="6" avgMicrosecondsPerInvocation="2700" maxMicrosecondsPerInvocation="12388" standardDeviationMircosecondsPerInvocation="4368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.IDivResultCastToDouble" totalMilliseconds="13" invocations="6" avgMicrosecondsPerInvocation="2279" maxMicrosecondsPerInvocation="13506" standardDeviationMircosecondsPerInvocation="5020"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
