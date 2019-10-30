@@ -16,7 +16,6 @@ public class Main
         Main main = new Main();
         main.setupGame();
         main.run();
-
     }
 
     public void inputHandling(){
