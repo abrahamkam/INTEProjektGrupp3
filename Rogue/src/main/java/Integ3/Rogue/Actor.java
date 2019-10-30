@@ -25,4 +25,9 @@ public abstract class Actor {
     public int getLength(){
         return length;
     }
+
+    public void setPosition(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 }

@@ -10,7 +10,7 @@ public class TestCollisionEdgeDetection {
 
 
     private int xCoordinate, yCoordinate;
-	GameScreen gameScreen;
+	private GameScreen gameScreen;
     ////////RIGHT SIDE
 	
 	//Assuming Gamescreen is 500x500
