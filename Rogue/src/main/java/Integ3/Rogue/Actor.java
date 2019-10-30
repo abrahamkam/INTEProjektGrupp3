@@ -1,15 +1,15 @@
 package Integ3.Rogue;
 
 public abstract class Actor {
-    private int x,y, length;
+    private int x, y, length;
 
-    public Actor(int x, int y, int length){
+    public Actor(int x, int y, int length) {
         this.x = x;
         this.y = y;
         this.length = length;
     }
 
-    public void move(int dx,int dy){
+    public void move(int dx, int dy) {
         this.x += dx;
         this.y += dy;
     }
@@ -22,7 +22,7 @@ public abstract class Actor {
         return x;
     }
 
-    public int getLength(){
+    public int getLength() {
         return length;
     }
 

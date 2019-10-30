@@ -16,12 +16,12 @@ public class EnemyMovementTest {
         player = screen.getPlayer();
         enemy = screen.getEnemy();
         screen.moveEnemy();
-        assertEquals(enemy.getY(),player.getY());
+        assertEquals(enemy.getY(), player.getY());
     }
 
     @Test
     public void enemyMoveSouthTest() {
-        GameScreen screen = new GameScreen(0, -1,0, 0);
+        GameScreen screen = new GameScreen(0, -1, 0, 0);
         player = screen.getPlayer();
         enemy = screen.getEnemy();
 
@@ -31,7 +31,7 @@ public class EnemyMovementTest {
 
     @Test
     public void enemyMoveEastTest() {
-        GameScreen screen = new GameScreen(1, 0,0, 0);
+        GameScreen screen = new GameScreen(1, 0, 0, 0);
         player = screen.getPlayer();
         enemy = screen.getEnemy();
         screen.moveEnemy();
@@ -40,7 +40,7 @@ public class EnemyMovementTest {
 
     @Test
     public void enemyMoveWestTest() {
-        GameScreen screen = new GameScreen(-1, 0,0, 0);
+        GameScreen screen = new GameScreen(-1, 0, 0, 0);
         player = screen.getPlayer();
         enemy = screen.getEnemy();
 
@@ -53,7 +53,7 @@ public class EnemyMovementTest {
 
     @Test
     public void moveNorthEastTest() {
-        GameScreen screen = new GameScreen(1, 1,0, 0);
+        GameScreen screen = new GameScreen(1, 1, 0, 0);
         player = screen.getPlayer();
         enemy = screen.getEnemy();
         screen.moveEnemy();
@@ -62,7 +62,7 @@ public class EnemyMovementTest {
 
     @Test
     public void moveNorthWestTest() {
-        GameScreen screen = new GameScreen(-1, 1,0, 0);
+        GameScreen screen = new GameScreen(-1, 1, 0, 0);
         player = screen.getPlayer();
         enemy = screen.getEnemy();
         screen.moveEnemy();
@@ -71,7 +71,7 @@ public class EnemyMovementTest {
 
     @Test
     public void moveSouthEastTest() {
-        GameScreen screen = new GameScreen(1, -1,0, 0);
+        GameScreen screen = new GameScreen(1, -1, 0, 0);
         player = screen.getPlayer();
         enemy = screen.getEnemy();
 
@@ -81,7 +81,7 @@ public class EnemyMovementTest {
 
     @Test
     public void moveSouthWestTest() {
-        GameScreen screen = new GameScreen(-1, -1,0, 0);
+        GameScreen screen = new GameScreen(-1, -1, 0, 0);
         player = screen.getPlayer();
         enemy = screen.getEnemy();
 
