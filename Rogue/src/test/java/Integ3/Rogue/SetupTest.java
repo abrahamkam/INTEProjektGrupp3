@@ -27,6 +27,7 @@ public class SetupTest {
 
     }
 
+    @Test
     public void playerNotNullTest() {
         Main main = new Main();
         main.setupGame();
