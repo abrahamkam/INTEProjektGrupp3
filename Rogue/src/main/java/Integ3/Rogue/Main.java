@@ -19,9 +19,12 @@ public class Main
 
     }
 
+    public void inputHandling(){
+
+    }
+
     public void setupGame(){
-        Player player = new Player(50,50);
-        //screen = new GameScreen(player, new Enemy(20,20, player));
+        screen = new GameScreen(50,50,10,10);
     }
 
     public void run(){
