@@ -16,7 +16,6 @@ public class InputTest {
     @Test
     public void wTest() {
         GameScreen screen = new GameScreen(10,10,20,20);
-        GameScreen screenspy = spy(screen);
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
                 .currentTimeMillis(), 0, VK_W, 'w');
         screen.inputHandling(key);
@@ -27,31 +26,28 @@ public class InputTest {
     @Test
     public void sTest() {
         GameScreen screen = new GameScreen(10,10,20,20);
-        GameScreen screenspy = spy(screen);
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
                 .currentTimeMillis(), 0, VK_S, 's');
-        screenspy.inputHandling(key);
+        screen.inputHandling(key);
         assertEquals(9,screen.getPlayer().getY());
     }
 
     @Test
     public void dTest() {
         GameScreen screen = new GameScreen(10,10,20,20);
-        GameScreen screenSpy = spy(screen);
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
                 .currentTimeMillis(), 0, VK_D, 'd');
-        screenSpy.inputHandling(key);
+        screen.inputHandling(key);
         assertEquals(11,screen.getPlayer().getX());
     }
 
     @Test
     public void aTest() {
         GameScreen screen = new GameScreen(10,10,20,20);
-        GameScreen screenSpy = spy(screen);
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
                 .currentTimeMillis(), 0, VK_A, 'a');
-        screenSpy.inputHandling(key);
-        assertEquals(9,screenSpy.getPlayer().getX());
+        screen.inputHandling(key);
+        assertEquals(9,screen.getPlayer().getX());
     }
 
     @Test
