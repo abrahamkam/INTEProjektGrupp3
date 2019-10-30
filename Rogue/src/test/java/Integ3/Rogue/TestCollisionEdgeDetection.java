@@ -4,30 +4,35 @@ import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import Integ3.Rogue.GameScreen;
 
 public class TestCollisionEdgeDetection {
 
 
     private int xCoordinate, yCoordinate;
-    //Assuming Gamescreen is 500x500
-	
+	GameScreen gameScreen;
     ////////RIGHT SIDE
+	
+	//Assuming Gamescreen is 500x500
     
 	@Test
 	public void testIsCollisionWithEdgeBigX() {
 		
-		
-
 		xCoordinate = 500;
 		yCoordinate = 100;
-		assertTrue(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+		
+		gameScreen = new GameScreen(xCoordinate,yCoordinate,0,0);
+		
+		assertTrue(gameScreen.isCollisionWithEdge());
 	}
 	
 	@Test
 	public void testNoCollisionWithEdgeBigX() {
 		xCoordinate = 499;
 		yCoordinate = 100;
-		assertFalse(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+		gameScreen = new GameScreen(xCoordinate,yCoordinate,0,0);
+		
+		assertFalse(gameScreen.isCollisionWithEdge());
 	}
 
 	//// LEFT SIDE
@@ -35,17 +40,18 @@ public class TestCollisionEdgeDetection {
 	@Test
 	public void testIsCollisionWithEdgeSmallX() {
 
-
 		xCoordinate = 0;
 		yCoordinate = 100;
-		assertTrue(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+		gameScreen = new GameScreen(xCoordinate,yCoordinate,0,0);
+		assertTrue(gameScreen.isCollisionWithEdge());
 	}
 	
 	@Test
 	public void testNoCollisionWithEdgeSmallX() {
 		xCoordinate = 1;
 		yCoordinate = 100;
-		assertFalse(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+		gameScreen = new GameScreen(xCoordinate,yCoordinate,0,0);
+		assertFalse(gameScreen.isCollisionWithEdge());
 	}
 	
 	///BOTTOM SIDE
@@ -54,14 +60,16 @@ public class TestCollisionEdgeDetection {
 	public void testIsCollisionWithEdgeBigY() {
 		xCoordinate = 100;
 		yCoordinate = 500;
-		assertTrue(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+		gameScreen = new GameScreen(xCoordinate,yCoordinate,0,0);
+		assertTrue(gameScreen.isCollisionWithEdge());
 	}
 	
 	@Test
 	public void testNoCollisionWithEdgeBigY() {
 		xCoordinate = 100;
 		yCoordinate = 499;
-		assertFalse(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+		gameScreen = new GameScreen(xCoordinate,yCoordinate,0,0);
+		assertFalse(gameScreen.isCollisionWithEdge());
 	}
 
 	//TOP SIDE
@@ -70,14 +78,16 @@ public class TestCollisionEdgeDetection {
 	public void testIsCollisionWithEdgeSmallY() {
 		xCoordinate = 100;
 		yCoordinate = 0;
-		assertTrue(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+		gameScreen = new GameScreen(xCoordinate,yCoordinate,0,0);
+		assertTrue(gameScreen.isCollisionWithEdge());
 	}
 
 	@Test
 	public void testNoCollisionWithEdgeSmallY() {
 		xCoordinate = 100;
 		yCoordinate = 1;
-		assertFalse(GameScreen.isCollisionWithEdge(xCoordinate,yCoordinate));
+		gameScreen = new GameScreen(xCoordinate,yCoordinate,0,0);
+		assertFalse(gameScreen.isCollisionWithEdge());
 	}
-
+	
 }

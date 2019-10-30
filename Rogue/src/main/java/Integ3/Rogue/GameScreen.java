@@ -2,8 +2,8 @@ package Integ3.Rogue;
 
 public class GameScreen {
 
-    private static final int gameWidth = 500;
-    private static final int gameHeight = 500;
+    private final int gameWidth = 500;
+    private final int gameHeight = 500;
     private Enemy enemy;
     private Player player;
 
@@ -16,25 +16,29 @@ public class GameScreen {
         this.enemy = new Enemy(enemyX, enemyY);
     }
 
-    public static boolean isCollisionWithEdge(int xCoordinate, int yCoordinate) {
+    public boolean isCollisionWithEdge() {
         boolean isCollision = false;
 
-        if (xCoordinate >= gameWidth || xCoordinate <= 0)
+        if (player.getX() >= gameWidth || player.getX() <= 0)
             isCollision = true;
 
-        if (yCoordinate >= gameHeight || yCoordinate <= 0)
+        if (player.getY() >= gameHeight || player.getY() <= 0)
             isCollision = true;
 
 
         return isCollision;
     }
 
-    public static boolean isCollisionWithEnemy(int playerXCoordinate, int playerYCoordinate, int enemyXCoordinate, int enemyYCoordinate) {
+    public boolean isCollisionWithEnemy() {
         boolean isCollision = false;
 
-        //Hårdkodad tills vidare (avstånd mellan mitten koordinat och varje kant för spelare
-        int playerLength = 50;
-
+        int playerLength = player.getLength();
+        int enemyXCoordinate = enemy.getX();
+        int enemyYCoordinate = enemy.getY();
+        int playerXCoordinate = player.getX();
+        int playerYCoordinate = player.getY();
+        
+        
         if ((enemyXCoordinate > (playerXCoordinate - playerLength)) && (enemyXCoordinate < (playerXCoordinate + playerLength)))
             if ((enemyYCoordinate > (playerYCoordinate - playerLength)) && (enemyYCoordinate < (playerYCoordinate + playerLength)))
                 isCollision = true;

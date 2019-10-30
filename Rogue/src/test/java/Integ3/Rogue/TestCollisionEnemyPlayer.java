@@ -3,27 +3,29 @@ package Integ3.Rogue;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import Integ3.Rogue.GameScreen;
 
 public class TestCollisionEnemyPlayer {
 
 
     private int playerXCoordinate, playerYCoordinate, enemyXCoordinate, enemyYCoordinate;
-
-    ///Assuming that the total lengt of player is 100 (50 on each side of coordinate in the middle)
+    private GameScreen gameScreen;
+    ///Assuming that the total length of player is 100 (50 on each side of coordinate in the middle)
 		
 
     /// LEFT SIDE
     
 	@Test
 	public void testIsCollisionWithEnemyXLeft() {
-
-
+		
 		playerXCoordinate = 100;
 		playerYCoordinate = 100;
 		enemyXCoordinate = 51;
 		enemyYCoordinate = 100;
+		
+		gameScreen = new GameScreen(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate);
 
-		assertTrue(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		assertTrue(gameScreen.isCollisionWithEnemy());
 
 	}
 	
@@ -36,7 +38,9 @@ public class TestCollisionEnemyPlayer {
 		enemyXCoordinate = 49;
 		enemyYCoordinate = 100;
 
-		assertFalse(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		gameScreen = new GameScreen(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate);
+		
+		assertFalse(gameScreen.isCollisionWithEnemy());
 	}
 
 	//// RIGHT SIDE
@@ -50,7 +54,9 @@ public class TestCollisionEnemyPlayer {
 		enemyXCoordinate = 149;
 		enemyYCoordinate = 100;
 
-		assertTrue(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		gameScreen = new GameScreen(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate);
+		
+		assertTrue(gameScreen.isCollisionWithEnemy());
 
 	}
 	
@@ -63,7 +69,9 @@ public class TestCollisionEnemyPlayer {
 		enemyXCoordinate = 151;
 		enemyYCoordinate = 100;
 
-		assertFalse(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		gameScreen = new GameScreen(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate);
+		
+		assertFalse(gameScreen.isCollisionWithEnemy());
 	}
 
 	//// TOP
@@ -76,7 +84,9 @@ public class TestCollisionEnemyPlayer {
 		enemyXCoordinate = 100;
 		enemyYCoordinate = 51;
 
-		assertTrue(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		gameScreen = new GameScreen(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate);
+		
+		assertTrue(gameScreen.isCollisionWithEnemy());
 
 	}
 	
@@ -89,7 +99,9 @@ public class TestCollisionEnemyPlayer {
 		enemyXCoordinate = 100;
 		enemyYCoordinate = 49;
 
-		assertFalse(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		gameScreen = new GameScreen(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate);
+		
+		assertFalse(gameScreen.isCollisionWithEnemy());
 	}
 	
 	///// BOTTOM
@@ -103,7 +115,9 @@ public class TestCollisionEnemyPlayer {
 		enemyXCoordinate = 100;
 		enemyYCoordinate = 149;
 
-		assertTrue(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		gameScreen = new GameScreen(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate);
+		
+		assertTrue(gameScreen.isCollisionWithEnemy());
 
 	}
 	
@@ -115,7 +129,9 @@ public class TestCollisionEnemyPlayer {
 		enemyXCoordinate = 100;
 		enemyYCoordinate = 151;
 
-		assertFalse(GameScreen.isCollisionWithEnemy(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate));
+		gameScreen = new GameScreen(playerXCoordinate,playerYCoordinate,enemyXCoordinate,enemyYCoordinate);
+		
+		assertFalse(gameScreen.isCollisionWithEnemy());
 	}
 
 }
