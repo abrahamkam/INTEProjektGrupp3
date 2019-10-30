@@ -1,5 +1,7 @@
 package Integ3.Rogue;
 
+import static java.lang.Math.abs;
+
 public class GameScreen {
 
     private static int gameWidth = 500;
@@ -55,6 +57,32 @@ public class GameScreen {
         }
     }
 
+    public boolean playerShoot(){
+        int deltaX = player.getX() - enemy.getX();
+        int deltaY = player.getY() - enemy.getY();
+        int boundaryWidth = enemy.getLength();
+        Player.Direction playerDirection = player.getDirection();
+
+        if (playerDirection == Player.Direction.NORTH){
+            if(deltaY > 0 && abs(deltaX) <= boundaryWidth){
+                return true;
+            }
+        } else if(playerDirection == Player.Direction.EAST){
+            if(deltaX < 0 && abs(deltaY) <= boundaryWidth){
+                return true;
+            }
+        } else if(playerDirection == Player.Direction.SOUTH){
+            if(deltaY < 0 && abs(deltaX) <= boundaryWidth){
+                return true;
+            }
+        } else if(playerDirection == Player.Direction.WEST){
+            if(deltaX > 0 && abs(deltaY) <= boundaryWidth){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public int getGameWidth() {
         return gameWidth;
     }
@@ -63,11 +91,11 @@ public class GameScreen {
         return gameHeight;
     }
 
-    public static Player getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 
-    public static Enemy getEnemy() {
+    public Enemy getEnemy() {
         return enemy;
     }
 }

@@ -1,10 +1,9 @@
 package Integ3.Rogue;
 
-import static java.lang.Math.abs;
-
 public class Player extends Actor {
-    private direction dir;
-    enum direction {
+    private Direction Direction;
+
+    enum Direction {
         NORTH,
         EAST,
         WEST,
@@ -12,39 +11,15 @@ public class Player extends Actor {
     }
 
     public Player(int x, int y) {
-        super(x,y, 50);
+        super(x, y, 50);
     }
 
 
-    public void setDirection(direction dir){
-        this.dir = dir;
+    public void setDirection(Direction dir) {
+        this.Direction = dir;
     }
 
-    public boolean shoot(Enemy e){
-        int dx = this.getX() - e.getX();
-        int dy = this.getY() - e.getY();
-        int w = e.getLength()/2;
-        int absDx = abs(dx);
-        int absDy = abs(dy);
-
-        if (dir == direction.NORTH){
-            if(dy>0 && absDx <= w){
-                return true;
-            }
-        } else if(dir == direction.EAST){
-            if(dx<0 && absDy<w){
-                return true;
-            }
-        } else if(dir == direction.SOUTH){
-            if(dy<0 && absDx<w){
-                return true;
-            }
-        } else if(dir == direction.WEST){
-            if(dx>0 && absDy<w){
-                return true;
-            }
-        }
-        return false;
+    public Direction getDirection() {
+        return Direction;
     }
-
 }
