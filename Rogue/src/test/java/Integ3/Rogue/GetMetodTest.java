@@ -16,7 +16,6 @@ public class GetMetodTest {
 	
 	
 	@Test
-	
 	public void getXTest() {
 	int a = actor.getX();
 	assertEquals(10,a);
