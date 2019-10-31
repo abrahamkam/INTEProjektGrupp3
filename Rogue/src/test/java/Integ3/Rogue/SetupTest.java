@@ -2,8 +2,6 @@ package Integ3.Rogue;
 
 import org.junit.Test;
 
-import java.awt.event.KeyEvent;
-
 import static org.junit.Assert.*;
 
 public class SetupTest {
@@ -27,6 +25,7 @@ public class SetupTest {
 
     }
 
+    @Test
     public void playerNotNullTest() {
         Main main = new Main();
         main.setupGame();

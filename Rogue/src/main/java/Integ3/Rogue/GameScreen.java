@@ -1,5 +1,7 @@
 package Integ3.Rogue;
 
+import java.awt.event.KeyEvent;
+
 import static java.lang.Math.abs;
 
 public class GameScreen {
@@ -11,6 +13,25 @@ public class GameScreen {
 
     public GameScreen(int playerX, int playerY, int enemyX, int enemyY) {
         spawn(playerX, playerY, enemyX, enemyY);
+    }
+
+    public void inputHandling(KeyEvent e) {
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_W:
+                getPlayer().move(0, 1);
+                break;
+            case KeyEvent.VK_S:
+                getPlayer().move(0, -1);
+                break;
+            case KeyEvent.VK_D:
+                getPlayer().move(1, 0);
+                break;
+            case KeyEvent.VK_A:
+                getPlayer().move(-1, 0);
+                break;
+            case KeyEvent.VK_SPACE:
+                playerShoot();
+        }
     }
 
     private void spawn(int playerX, int playerY, int enemyX, int enemyY) {
