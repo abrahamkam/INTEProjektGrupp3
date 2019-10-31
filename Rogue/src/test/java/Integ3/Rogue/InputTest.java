@@ -2,6 +2,7 @@ package Integ3.Rogue;
 
 
 import org.junit.Test;
+import org.mockito.Mock;
 
 import javax.swing.*;
 import java.awt.event.KeyEvent;
@@ -57,10 +58,24 @@ public class InputTest {
         KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
                 .currentTimeMillis(), 0, VK_SPACE, 'a');
         screenspy.inputHandling(key);
-        verify(screenspy).playerShoot();
+        verify(screenspy, times(1)).playerShoot();
     }
 
-/*
+    /*
+    @Mock
+    GameScreen mockedGameScreen;
+    @Mock
+    Player mockedPlayer;
+    @Test
+    public void spaceMockTest(){
+        KeyEvent key = new KeyEvent(new JFrame(), KeyEvent.KEY_PRESSED, System
+                .currentTimeMillis(), 0, VK_W, 'w');
+        when(mockedGameScreen.getPlayer()).thenReturn(mockedPlayer);
+        mockedGameScreen.inputHandling(key);
+        mockedPlayer.move(0,1);
+        verify(mockedPlayer, times(1)).move(0,1);
+    }
+
     @Test
     public void wTest() {
         Main main = new Main();
