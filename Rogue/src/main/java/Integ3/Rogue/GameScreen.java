@@ -11,6 +11,7 @@ public class GameScreen {
     private Enemy enemy;
     private Player player;
     private Score score;
+    private boolean isRunning = false;
 
     public GameScreen(int playerX, int playerY, int enemyX, int enemyY) {
         score = new Score();
@@ -85,6 +86,10 @@ public class GameScreen {
             enemy.move(0, -1);
         }
     }
+    private void killEnemy(){
+        score.changeScore(10);
+        gameOver();
+    }
 
     public boolean playerShoot() {
         int deltaX = player.getX() - enemy.getX();
@@ -94,26 +99,39 @@ public class GameScreen {
 
         if (playerDirection == Player.Direction.NORTH) {
             if (deltaY > 0 && abs(deltaX) <= boundaryWidth) {
-                score.changeScore(10);
+                killEnemy();
                 return true;
             }
         } else if (playerDirection == Player.Direction.EAST) {
             if (deltaX < 0 && abs(deltaY) <= boundaryWidth) {
-                score.changeScore(10);
+                killEnemy();
                 return true;
             }
         } else if (playerDirection == Player.Direction.SOUTH) {
             if (deltaY < 0 && abs(deltaX) <= boundaryWidth) {
-                score.changeScore(10);
+                killEnemy();
                 return true;
             }
         } else if (playerDirection == Player.Direction.WEST) {
             if (deltaX > 0 && abs(deltaY) <= boundaryWidth) {
-                score.changeScore(10);
+                killEnemy();
                 return true;
             }
         }
         return false;
+    }
+
+    public void gameLoop(boolean ending){
+        do {
+            moveEnemy();
+            if (isCollisionWithEnemy()) {
+                gameOver();
+            }
+        } while(ending && isRunning);
+    }
+
+    public void gameOver(){
+        isRunning = false;
     }
 
 

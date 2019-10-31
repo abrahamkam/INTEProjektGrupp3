@@ -11,13 +11,6 @@ public class Main {
 
 
     }
-    /*
-
-   run loop
-
-
-
-*/
     public void setupGame() {
         screen = new GameScreen(50, 50, 10, 10);
     }

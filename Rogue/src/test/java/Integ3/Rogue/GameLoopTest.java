@@ -14,38 +14,37 @@ public class GameLoopTest {
         GameScreen screen = new GameScreen(10,100,10,0);
         GameScreen spyScreen = spy(screen);
         spyScreen.getPlayer().setDirection(Player.Direction.NORTH);
-        verify(spyScreen).gameOver();
-        assertTrue(spyScreen.playerShoot());
-
+        spyScreen.playerShoot();
+        verify(spyScreen, times(1)).playerShoot();
+        verify(spyScreen, times(1)).gameOver();
     }
+
     @Test
-    public void playerShootFalseTest(){
-        GameScreen screen = new GameScreen(10,100,10,0);
+    public void playerShootFalseTest() {
+        GameScreen screen = new GameScreen(10, 100, 10, 0);
         GameScreen spyScreen = spy(screen);
         spyScreen.getPlayer().setDirection(Player.Direction.SOUTH);
-        verifyNoInteractions().gameOver();
-        assertFalse(spyScreen.playerShoot());
-
+        spyScreen.playerShoot();
+        verify(spyScreen, times(1)).playerShoot();
+        verify(spyScreen, times(0)).gameOver();
     }
 
     @Test
     public void isCollissionWithEnemyTest(){
         GameScreen screen = new GameScreen(10,1,10,0);
         GameScreen spyScreen = spy(screen);
-        spyScreen.moveEnemy();
-        spyScreen.isCollisionWithEnemy();
+        spyScreen.gameLoop(false);
         verify(spyScreen).gameOver();
-        assertFalse(spyScreen.playerShoot());
+        assertTrue(spyScreen.isCollisionWithEnemy());
     }
 
     @Test
     public void noCollissionWithEnemyTest(){
         GameScreen screen = new GameScreen(10,200,10,0);
         GameScreen spyScreen = spy(screen);
-        spyScreen.moveEnemy();
-        spyScreen.isCollisionWithEnemy();
-        verifyNoInteractions(spyScreen).gameOver();
-        assertFalse(spyScreen.playerShoot());
+        spyScreen.gameLoop(false);
+        verify(spyScreen,times(0)).gameOver();
+        assertFalse(spyScreen.isCollisionWithEnemy());
     }
 
 }
