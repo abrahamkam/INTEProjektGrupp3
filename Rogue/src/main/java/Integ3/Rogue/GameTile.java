@@ -1,24 +1,19 @@
 package Integ3.Rogue;
 
-public class GameTile {
-	
-	private Actor[] gameActor = new Actor[2];
-	
-public Actor[]getGameActors() {
-	Actor[] ac= new Actor[gameActor.length];
-	for(int i = 0; i<ac.length; i++){ 
-		ac[i] =gameActor[i];
-	}
-	return ac;
-	}
+import java.util.ArrayList;
+import java.util.List;
 
-public void addActor(Actor...o) {
-	for(int i = 0; i<o.length; i++) {
-		if(o[i] instanceof Player) {
-			gameActor[0]=o[i];
-		}
-				}
-	
-}
+public class GameTile {
+
+	private ArrayList<Actor> gameActors = new ArrayList<>();
+
+    public void addActor(Actor o) {
+    	gameActors.add(o);
+    }
+
+    public ArrayList<Actor> getGameActors() {
+
+        return gameActors;
+    }
 }
 

@@ -5,15 +5,14 @@ import static org.junit.Assert.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-import Integ3.Rogue.Player.direction;
 
 
 public class GetMetodTest {
 	
 	int playerx =5,playery=7,enemyx=6,enemyy=8;
 	GameScreen gameScreen = new GameScreen(playerx,playery,enemyx,enemyy);	
-	Score score= new Score(100);
-	Actor actor = new Actor(10,20,60);
+	Score score= new Score();
+	Player actor = new Player(10,20);
 	
 	
 	@Test
@@ -33,20 +32,20 @@ public class GetMetodTest {
 	@Test 
 	public void getLengthTest() {
 		int length = actor.getLength();
-		assertEquals(60,length);
+		assertEquals(50,length);
 	}
 	
 	
 	@Test
 	public void getGameWidthTest() {
 	    int width =gameScreen.getGameWidth();
-	    assertEquals(200,width);
+	    assertEquals(500,width);
 	  	
 	}
 	@Test
 	public void getGameHeightTest() {
 	    int width =gameScreen.getGameHeight();
-	    assertEquals(300,width);
+	    assertEquals(500,width);
 	  	
 	}
 	
@@ -68,6 +67,7 @@ public class GetMetodTest {
 	}
 	@Test
 	public void getScoreTest() {
+		score.changeScore(100);
 		int s = score.getPlayerScore();
 		assertEquals(100,s);
 	}
