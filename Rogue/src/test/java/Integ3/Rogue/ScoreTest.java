@@ -14,7 +14,7 @@ public class ScoreTest {
 		Score score= new Score();
 		score.changeScore(100);
 		
-   AssertEquals(100, score.getPlayerScore());
+   		assertEquals(100, score.getPlayerScore());
 		
 	}
 	@Test
@@ -23,7 +23,7 @@ public class ScoreTest {
 		score.changeScore(100);
 		score.changeScore(-50);
 		
-		AssertEquals(50,score.getPlayerScore());
+		assertEquals(50,score.getPlayerScore());
 	}
 	
 	//default constructor test
@@ -31,21 +31,8 @@ public class ScoreTest {
 	public void scoreTest() { 
 	
 	Score score = new Score();
-	AssertEquals(0,score.getPlayerScore());
+	assertEquals(0,score.getPlayerScore());
 	}
-	
-	
-	//add balance constructor test
-	@Test
-	public void addScoreTest() {
-		Score score= new Score();
-		AssertEquals(200,score.getPlayerScore());
-	}
-	
 
-	private void AssertEquals(int i, int playerScore) {
-		
-		
-	}
 
 }

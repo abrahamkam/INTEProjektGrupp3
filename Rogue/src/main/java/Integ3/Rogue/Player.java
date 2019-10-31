@@ -1,7 +1,7 @@
 package Integ3.Rogue;
 
 public class Player extends Actor {
-    private Direction Direction;
+    private Direction direction;
 
     enum Direction {
         NORTH,
@@ -16,10 +16,10 @@ public class Player extends Actor {
 
 
     public void setDirection(Direction dir) {
-        this.Direction = dir;
+        this.direction = dir;
     }
 
     public Direction getDirection() {
-        return Direction;
+        return direction;
     }
 }
