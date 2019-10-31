@@ -9,8 +9,15 @@ public class Main {
         Main main = new Main();
         main.setupGame();
 
-    }
 
+    }
+    /*
+
+   run loop
+
+
+
+*/
     public void setupGame() {
         screen = new GameScreen(50, 50, 10, 10);
     }

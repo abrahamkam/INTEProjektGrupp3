@@ -18,6 +18,11 @@ public class GameScreen {
     }
 
 
+    private void spawn(int playerX, int playerY, int enemyX, int enemyY) {
+        this.player = new Player(playerX, playerY);
+        this.enemy = new Enemy(enemyX, enemyY);
+    }
+
     public void inputHandling(KeyEvent e) {
         switch (e.getKeyCode()) {
             case KeyEvent.VK_W:
@@ -37,10 +42,7 @@ public class GameScreen {
         }
     }
 
-    private void spawn(int playerX, int playerY, int enemyX, int enemyY) {
-        this.player = new Player(playerX, playerY);
-        this.enemy = new Enemy(enemyX, enemyY);
-    }
+
 
     public boolean isCollisionWithEdge() {
         boolean isCollision = false;
@@ -113,6 +115,7 @@ public class GameScreen {
         }
         return false;
     }
+
 
     public int getGameWidth() {
         return gameWidth;
