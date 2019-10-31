@@ -8,9 +8,8 @@ public class Main {
     public static void main(String[] args) {
         Main main = new Main();
         main.setupGame();
-
-
     }
+  
     public void setupGame() {
         screen = new GameScreen(50, 50, 10, 10);
     }

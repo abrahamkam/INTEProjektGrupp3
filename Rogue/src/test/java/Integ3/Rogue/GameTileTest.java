@@ -2,6 +2,8 @@ package Integ3.Rogue;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertTrue;
+
 public class GameTileTest {
 	
 
@@ -15,9 +17,7 @@ public class GameTileTest {
 		Enemy enemy = new Enemy(2,3);
 		gameTile.addActor(enemy);
 		gameTile.addActor(player);
-
-
-		assert(gameTile.getGameActors().get(0).equals(enemy) && gameTile.getGameActors().get(1).equals(player));
+		assertTrue(gameTile.getGameActors().get(0).equals(enemy) && gameTile.getGameActors().get(1).equals(player));
 	}
 
 }

@@ -2,6 +2,8 @@ package Integ3.Rogue;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertTrue;
+
 //Testing the shoot function by moving an enemy object to different locations
 //while changing the direction of a player object placed at the center of the map.
 public class PlayerShootTest {
@@ -28,7 +30,7 @@ public class PlayerShootTest {
         xPos = xCenter + enemyBoundary;
         yPos = north;
         enemy.setPosition(xPos, yPos);
-        assert (gameScreen.playerShoot());
+        assertTrue(gameScreen.playerShoot());
     }
 
     //    TF2	player_dir e, enemy se, left hit
@@ -41,7 +43,7 @@ public class PlayerShootTest {
             yPos -= 1;
         }
         enemy.setPosition(xPos, yPos);
-        assert (gameScreen.playerShoot());
+        assertTrue(gameScreen.playerShoot());
     }
 
     //    TF3	player_dir s, enemy s, center hit
@@ -51,7 +53,7 @@ public class PlayerShootTest {
         xPos = xCenter;
         yPos = south;
         enemy.setPosition(xPos, yPos);
-        assert (gameScreen.playerShoot());
+        assertTrue(gameScreen.playerShoot());
     }
 
     //    TF4	player_dir w, enemy sw, right hit
@@ -64,7 +66,7 @@ public class PlayerShootTest {
             yPos -= 1;
         }
         enemy.setPosition(xPos, yPos);
-        assert (gameScreen.playerShoot());
+        assertTrue(gameScreen.playerShoot());
     }
 
     //    TF5	player_dir n, enemy nw, right boundary hit
@@ -74,7 +76,7 @@ public class PlayerShootTest {
         xPos = xCenter - enemyBoundary;
         yPos = north;
         enemy.setPosition(xPos, yPos);
-        assert(gameScreen.playerShoot());
+        assertTrue(gameScreen.playerShoot());
     }
 
     //    TF6	player_dir e, enemy w, miss
@@ -84,7 +86,7 @@ public class PlayerShootTest {
         xPos = west;
         yPos = yCenter;
         enemy.setPosition(xPos, yPos);
-        assert (!gameScreen.playerShoot());
+        assertTrue(!gameScreen.playerShoot());
     }
 
     //    TF7	player_dir s, enemy se, miss
@@ -94,7 +96,7 @@ public class PlayerShootTest {
         xPos = east;
         yPos = south;
         enemy.setPosition(xPos, yPos);
-        assert (!gameScreen.playerShoot());
+        assertTrue(!gameScreen.playerShoot());
     }
 
     //    TF8	player_dir w, enemy s, miss
@@ -104,7 +106,7 @@ public class PlayerShootTest {
         xPos = xCenter;
         yPos = south;
         enemy.setPosition(xPos, yPos);
-        assert (!gameScreen.playerShoot());
+        assertTrue(!gameScreen.playerShoot());
     }
 
     //    TF9	player_dir n, enemy e, miss
@@ -114,7 +116,7 @@ public class PlayerShootTest {
         xPos = east;
         yPos = yCenter;
         enemy.setPosition(xPos, yPos);
-        assert (!gameScreen.playerShoot());
+        assertTrue(!gameScreen.playerShoot());
     }
 
     //    TF10	player_dir e, enemy ne, right boundary miss
@@ -124,7 +126,7 @@ public class PlayerShootTest {
         xPos = xCenter - enemyBoundary;
         yPos = yCenter;
         enemy.setPosition(xPos, yPos);
-        assert (!gameScreen.playerShoot());
+        assertTrue(!gameScreen.playerShoot());
     }
 
     //    TF11	player_dir s, enemy sw, left boundary miss
@@ -134,6 +136,6 @@ public class PlayerShootTest {
         xPos = xCenter - enemyBoundary;
         yPos = yCenter;
         enemy.setPosition(xPos, yPos);
-        assert (!gameScreen.playerShoot());
+        assertTrue(!gameScreen.playerShoot());
     }
 }

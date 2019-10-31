@@ -1,5 +1,7 @@
 package Integ3.Rogue;
 
+import org.junit.Test;
+
 public class ProfilerTest {
 
     GameScreen screen;
@@ -11,11 +13,13 @@ public class ProfilerTest {
         enemy = screen.getEnemy();
         chaseScenario();
     }
-
+    @Test
     public void chaseScenario(){
-
+        System.out.println("Number of turns around the map");
+        int turn = 0;
         while (true){
-            System.out.println("Lorp");
+            turn++;
+            System.out.println(turn);
             while (player.getY() < screen.getGameHeight()){
 
                 try{
