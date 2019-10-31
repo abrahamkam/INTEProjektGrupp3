@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://findbugs.sourceforge.net/xsl/default.xsl"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1572521171953" analysisTimestamp="1572521169241" release="">
+  <Project projectName="Rogue[Rogue]">
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Score.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Player$Direction.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Enemy.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Player.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Main.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/GameScreen.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/GameTile.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes/Integ3/Rogue/Actor.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/ActorTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/TestCollisionEnemyPlayer.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/ProfilerTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/GameTileTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/SetupTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/GetMetodTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/PlayerMovementTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/TestCollisionEdgeDetection.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/EnemyMovementTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/InputTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/PlayerShootTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/ScoreTest.class</Jar>
+    <Jar>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes/Integ3/Rogue/MainTest.class</Jar>
+    <AuxClasspathEntry>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/target/test-classes</AuxClasspathEntry>
+    <SrcDir>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/src/main/java</SrcDir>
+    <SrcDir>/Users/hem/Desktop/repos/INTEProjektGrupp3/Rogue/src/test/java</SrcDir>
+  </Project>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="65152862a0c564cb15abed863818df65" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in Integ3.Rogue.GameScreen.inputHandling(KeyEvent) where default case is missing</LongMessage>
+    <Class classname="Integ3.Rogue.GameScreen" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java">
+        <Message>In GameScreen.java</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.GameScreen</Message>
+    </Class>
+    <Method classname="Integ3.Rogue.GameScreen" name="inputHandling" signature="(Ljava/awt/event/KeyEvent;)V" isStatic="false" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" start="22" end="38" startBytecode="0" endBytecode="215" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java"/>
+      <Message>In method Integ3.Rogue.GameScreen.inputHandling(KeyEvent)</Message>
+    </Method>
+    <SourceLine classname="Integ3.Rogue.GameScreen" primary="true" start="22" end="36" startBytecode="4" endBytecode="108" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java">
+      <Message>At GameScreen.java:[lines 22-36]</Message>
+    </SourceLine>
+    <SourceLine classname="Integ3.Rogue.GameScreen" primary="true" start="22" end="36" startBytecode="4" endBytecode="108" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java">
+      <Message>At GameScreen.java:[lines 22-36]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" instanceHash="59cc48106f9685845f7a6f396fd2cef9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field: should this field be static?</ShortMessage>
+    <LongMessage>Unread field: Integ3.Rogue.GameScreen.gameHeight; should this field be static?</LongMessage>
+    <Class classname="Integ3.Rogue.GameScreen" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java">
+        <Message>In GameScreen.java</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.GameScreen</Message>
+    </Class>
+    <Field classname="Integ3.Rogue.GameScreen" name="gameHeight" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java">
+        <Message>In GameScreen.java</Message>
+      </SourceLine>
+      <Message>Field Integ3.Rogue.GameScreen.gameHeight</Message>
+    </Field>
+    <SourceLine classname="Integ3.Rogue.GameScreen" primary="true" start="10" end="10" startBytecode="15" endBytecode="15" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java">
+      <Message>At GameScreen.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" instanceHash="9f0048dd84c57e2634380f1fd996bb84" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field: should this field be static?</ShortMessage>
+    <LongMessage>Unread field: Integ3.Rogue.GameScreen.gameWidth; should this field be static?</LongMessage>
+    <Class classname="Integ3.Rogue.GameScreen" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java">
+        <Message>In GameScreen.java</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.GameScreen</Message>
+    </Class>
+    <Field classname="Integ3.Rogue.GameScreen" name="gameWidth" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="Integ3.Rogue.GameScreen" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java">
+        <Message>In GameScreen.java</Message>
+      </SourceLine>
+      <Message>Field Integ3.Rogue.GameScreen.gameWidth</Message>
+    </Field>
+    <SourceLine classname="Integ3.Rogue.GameScreen" primary="true" start="9" end="9" startBytecode="8" endBytecode="8" sourcefile="GameScreen.java" sourcepath="Integ3/Rogue/GameScreen.java" relSourcepath="main/java/Integ3/Rogue/GameScreen.java">
+      <Message>At GameScreen.java:[line 9]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" instanceHash="46c7ac6782a38b69f4f9c814232a3b29" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field Integ3.Rogue.Main.screen from instance method Integ3.Rogue.Main.setupGame()</LongMessage>
+    <Class classname="Integ3.Rogue.Main" primary="true">
+      <SourceLine classname="Integ3.Rogue.Main" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="main/java/Integ3/Rogue/Main.java">
+        <Message>In Main.java</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.Main</Message>
+    </Class>
+    <Method classname="Integ3.Rogue.Main" name="setupGame" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Integ3.Rogue.Main" start="15" end="16" startBytecode="0" endBytecode="64" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="main/java/Integ3/Rogue/Main.java"/>
+      <Message>In method Integ3.Rogue.Main.setupGame()</Message>
+    </Method>
+    <Field classname="Integ3.Rogue.Main" name="screen" signature="LInteg3/Rogue/GameScreen;" isStatic="true" primary="true">
+      <SourceLine classname="Integ3.Rogue.Main" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="main/java/Integ3/Rogue/Main.java">
+        <Message>In Main.java</Message>
+      </SourceLine>
+      <Message>Field Integ3.Rogue.Main.screen</Message>
+    </Field>
+    <SourceLine classname="Integ3.Rogue.Main" primary="true" start="15" end="15" startBytecode="15" endBytecode="15" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="main/java/Integ3/Rogue/Main.java">
+      <Message>At Main.java:[line 15]</Message>
+    </SourceLine>
+    <SourceLine classname="Integ3.Rogue.Main" primary="true" start="15" end="15" startBytecode="15" endBytecode="15" sourcefile="Main.java" sourcepath="Integ3/Rogue/Main.java" relSourcepath="main/java/Integ3/Rogue/Main.java">
+      <Message>At Main.java:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="fcb937e56d88c5e100f6537e9591bfab" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: Integ3.Rogue.ProfilerTest.enemy</LongMessage>
+    <Class classname="Integ3.Rogue.ProfilerTest" primary="true">
+      <SourceLine classname="Integ3.Rogue.ProfilerTest" sourcefile="ProfilerTest.java" sourcepath="Integ3/Rogue/ProfilerTest.java" relSourcepath="test/java/Integ3/Rogue/ProfilerTest.java">
+        <Message>In ProfilerTest.java</Message>
+      </SourceLine>
+      <Message>In class Integ3.Rogue.ProfilerTest</Message>
+    </Class>
+    <Field classname="Integ3.Rogue.ProfilerTest" name="enemy" signature="LInteg3/Rogue/Enemy;" isStatic="false" primary="true">
+      <SourceLine classname="Integ3.Rogue.ProfilerTest" sourcefile="ProfilerTest.java" sourcepath="Integ3/Rogue/ProfilerTest.java" relSourcepath="test/java/Integ3/Rogue/ProfilerTest.java">
+        <Message>In ProfilerTest.java</Message>
+      </SourceLine>
+      <Message>Field Integ3.Rogue.ProfilerTest.enemy</Message>
+    </Field>
+    <SourceLine classname="Integ3.Rogue.ProfilerTest" primary="true" start="11" end="11" startBytecode="39" endBytecode="39" sourcefile="ProfilerTest.java" sourcepath="Integ3/Rogue/ProfilerTest.java" relSourcepath="test/java/Integ3/Rogue/ProfilerTest.java">
+      <Message>At ProfilerTest.java:[line 11]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SS_SHOULD_BE_STATIC" abbrev="SS" category="PERFORMANCE">
+    <ShortDescription>Unread field: should this field be static?</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class contains an instance final field that
+   is initialized to a compile-time static value.
+   Consider making the field static.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SF_SWITCH_NO_DEFAULT" abbrev="SF" category="STYLE">
+    <ShortDescription>Switch statement found where default case is missing</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="SS">
+    <Description>Unread field should be static</Description>
+  </BugCode>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="SF">
+    <Description>Switch case falls through</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 31 Oct 2019 12:26:08 +0100" total_classes="21" referenced_classes="21" total_bugs="5" total_size="771" num_packages="1" java_version="11.0.4" vm_version="11.0.4+10-b304.69" cpu_seconds="46.57" clock_seconds="266.41" peak_mbytes="1211.53" alloc_mbytes="2014.75" gc_seconds="0.11" priority_2="4" priority_1="1">
+    <FileStats path="Integ3/Rogue/Actor.java" bugCount="0" size="24"/>
+    <FileStats path="Integ3/Rogue/ActorTest.java" bugCount="0" size="67"/>
+    <FileStats path="Integ3/Rogue/Enemy.java" bugCount="0" size="4"/>
+    <FileStats path="Integ3/Rogue/EnemyMovementTest.java" bugCount="0" size="61"/>
+    <FileStats path="Integ3/Rogue/GameScreen.java" bugCount="3" size="87" bugHash="524663ec8a1daad9288e9c585f2e4ad2"/>
+    <FileStats path="Integ3/Rogue/GameTile.java" bugCount="0" size="10"/>
+    <FileStats path="Integ3/Rogue/GameTileTest.java" bugCount="0" size="13"/>
+    <FileStats path="Integ3/Rogue/GetMetodTest.java" bugCount="0" size="51"/>
+    <FileStats path="Integ3/Rogue/InputTest.java" bugCount="0" size="39"/>
+    <FileStats path="Integ3/Rogue/Main.java" bugCount="1" size="13" bugHash="d04fd73ef8222b13db3b8341e691c5b6"/>
+    <FileStats path="Integ3/Rogue/MainTest.java" bugCount="0" size="12"/>
+    <FileStats path="Integ3/Rogue/Player.java" bugCount="0" size="25"/>
+    <FileStats path="Integ3/Rogue/PlayerMovementTest.java" bugCount="0" size="33"/>
+    <FileStats path="Integ3/Rogue/PlayerShootTest.java" bugCount="0" size="108"/>
+    <FileStats path="Integ3/Rogue/ProfilerTest.java" bugCount="1" size="44" bugHash="1bfd93aa95612c735cb130222df549de"/>
+    <FileStats path="Integ3/Rogue/Score.java" bugCount="0" size="10"/>
+    <FileStats path="Integ3/Rogue/ScoreTest.java" bugCount="0" size="18"/>
+    <FileStats path="Integ3/Rogue/SetupTest.java" bugCount="0" size="26"/>
+    <FileStats path="Integ3/Rogue/TestCollisionEdgeDetection.java" bugCount="0" size="54"/>
+    <FileStats path="Integ3/Rogue/TestCollisionEnemyPlayer.java" bugCount="0" size="72"/>
+    <PackageStats package="Integ3.Rogue" total_bugs="5" total_types="21" total_size="771" priority_2="4" priority_1="1">
+      <ClassStats class="Integ3.Rogue.Actor" sourceFile="Actor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.ActorTest" sourceFile="ActorTest.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.Enemy" sourceFile="Enemy.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.EnemyMovementTest" sourceFile="EnemyMovementTest.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.GameScreen" sourceFile="GameScreen.java" interface="false" size="87" bugs="3" priority_2="3"/>
+      <ClassStats class="Integ3.Rogue.GameTile" sourceFile="GameTile.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.GameTileTest" sourceFile="GameTileTest.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.GetMetodTest" sourceFile="GetMetodTest.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.InputTest" sourceFile="InputTest.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.Main" sourceFile="Main.java" interface="false" size="13" bugs="1" priority_1="1"/>
+      <ClassStats class="Integ3.Rogue.MainTest" sourceFile="MainTest.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.Player" sourceFile="Player.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.Player$Direction" sourceFile="Player.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.PlayerMovementTest" sourceFile="PlayerMovementTest.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.PlayerShootTest" sourceFile="PlayerShootTest.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.ProfilerTest" sourceFile="ProfilerTest.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="Integ3.Rogue.Score" sourceFile="Score.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.ScoreTest" sourceFile="ScoreTest.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.SetupTest" sourceFile="SetupTest.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.TestCollisionEdgeDetection" sourceFile="TestCollisionEdgeDetection.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="Integ3.Rogue.TestCollisionEnemyPlayer" sourceFile="TestCollisionEnemyPlayer.java" interface="false" size="72" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="195" invocations="2" avgMicrosecondsPerInvocation="97902" maxMicrosecondsPerInvocation="120038" standardDeviationMircosecondsPerInvocation="22137"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="167" invocations="122" avgMicrosecondsPerInvocation="1369" maxMicrosecondsPerInvocation="20529" standardDeviationMircosecondsPerInvocation="2839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="166" invocations="143" avgMicrosecondsPerInvocation="1166" maxMicrosecondsPerInvocation="28156" standardDeviationMircosecondsPerInvocation="2603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="125" invocations="122" avgMicrosecondsPerInvocation="1027" maxMicrosecondsPerInvocation="8770" standardDeviationMircosecondsPerInvocation="1290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="122" invocations="134" avgMicrosecondsPerInvocation="915" maxMicrosecondsPerInvocation="7670" standardDeviationMircosecondsPerInvocation="1355"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="115" invocations="107" avgMicrosecondsPerInvocation="1080" maxMicrosecondsPerInvocation="25609" standardDeviationMircosecondsPerInvocation="2907"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="114" invocations="21" avgMicrosecondsPerInvocation="5453" maxMicrosecondsPerInvocation="56833" standardDeviationMircosecondsPerInvocation="13259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="102" invocations="122" avgMicrosecondsPerInvocation="839" maxMicrosecondsPerInvocation="6825" standardDeviationMircosecondsPerInvocation="1219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="76" invocations="182" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="9604" standardDeviationMircosecondsPerInvocation="1446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="68" invocations="21" avgMicrosecondsPerInvocation="3241" maxMicrosecondsPerInvocation="31270" standardDeviationMircosecondsPerInvocation="7010"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="65" invocations="122" avgMicrosecondsPerInvocation="532" maxMicrosecondsPerInvocation="5486" standardDeviationMircosecondsPerInvocation="831"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="56" invocations="123" avgMicrosecondsPerInvocation="462" maxMicrosecondsPerInvocation="33298" standardDeviationMircosecondsPerInvocation="2981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="54" invocations="122" avgMicrosecondsPerInvocation="447" maxMicrosecondsPerInvocation="21534" standardDeviationMircosecondsPerInvocation="2082"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="52" invocations="21" avgMicrosecondsPerInvocation="2494" maxMicrosecondsPerInvocation="28670" standardDeviationMircosecondsPerInvocation="5974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="50" invocations="21" avgMicrosecondsPerInvocation="2388" maxMicrosecondsPerInvocation="13111" standardDeviationMircosecondsPerInvocation="3446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="46" invocations="21" avgMicrosecondsPerInvocation="2223" maxMicrosecondsPerInvocation="20457" standardDeviationMircosecondsPerInvocation="4256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="44" invocations="21" avgMicrosecondsPerInvocation="2117" maxMicrosecondsPerInvocation="11005" standardDeviationMircosecondsPerInvocation="2843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="43" invocations="122" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="9233" standardDeviationMircosecondsPerInvocation="934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="40" invocations="185" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="4828" standardDeviationMircosecondsPerInvocation="497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="40" invocations="21" avgMicrosecondsPerInvocation="1933" maxMicrosecondsPerInvocation="12020" standardDeviationMircosecondsPerInvocation="3190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="34" invocations="122" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="16264" standardDeviationMircosecondsPerInvocation="1491"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="31" invocations="21" avgMicrosecondsPerInvocation="1517" maxMicrosecondsPerInvocation="31356" standardDeviationMircosecondsPerInvocation="6672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="31" invocations="21" avgMicrosecondsPerInvocation="1489" maxMicrosecondsPerInvocation="19059" standardDeviationMircosecondsPerInvocation="4059"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="29" invocations="21" avgMicrosecondsPerInvocation="1399" maxMicrosecondsPerInvocation="14703" standardDeviationMircosecondsPerInvocation="3064"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="29" invocations="21" avgMicrosecondsPerInvocation="1390" maxMicrosecondsPerInvocation="6595" standardDeviationMircosecondsPerInvocation="1401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="26" invocations="21" avgMicrosecondsPerInvocation="1244" maxMicrosecondsPerInvocation="15640" standardDeviationMircosecondsPerInvocation="3269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizingOnContentsOfFieldToProtectField" totalMilliseconds="25" invocations="21" avgMicrosecondsPerInvocation="1205" maxMicrosecondsPerInvocation="14048" standardDeviationMircosecondsPerInvocation="2929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDoubleCheck" totalMilliseconds="24" invocations="21" avgMicrosecondsPerInvocation="1143" maxMicrosecondsPerInvocation="7859" standardDeviationMircosecondsPerInvocation="2036"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="23" invocations="21" avgMicrosecondsPerInvocation="1113" maxMicrosecondsPerInvocation="7292" standardDeviationMircosecondsPerInvocation="1694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="23" invocations="21" avgMicrosecondsPerInvocation="1096" maxMicrosecondsPerInvocation="11450" standardDeviationMircosecondsPerInvocation="2382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InstantiateStaticClass" totalMilliseconds="21" invocations="21" avgMicrosecondsPerInvocation="1006" maxMicrosecondsPerInvocation="17923" standardDeviationMircosecondsPerInvocation="3785"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
