@@ -12,7 +12,7 @@ public class ScoreTest {
 	@Test
 	public void addTest() {
 		Score score= new Score();
-		score.addScore(100);
+		score.changeScore(100);
 		
    AssertEquals(100, score.getPlayerScore());
 		
@@ -20,8 +20,8 @@ public class ScoreTest {
 	@Test
 	public void deductionTest() {
 		Score score = new Score();
-		score.addScore(100);
-		score.deductionScore(50);
+		score.changeScore(100);
+		score.changeScore(-50);
 		
 		AssertEquals(50,score.getPlayerScore());
 	}

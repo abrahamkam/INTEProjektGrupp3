@@ -10,10 +10,13 @@ public class GameScreen {
     private final int gameHeight = 500;
     private Enemy enemy;
     private Player player;
+    private Score score;
 
     public GameScreen(int playerX, int playerY, int enemyX, int enemyY) {
+        score = new Score();
         spawn(playerX, playerY, enemyX, enemyY);
     }
+
 
     public void inputHandling(KeyEvent e) {
         switch (e.getKeyCode()) {
@@ -89,18 +92,22 @@ public class GameScreen {
 
         if (playerDirection == Player.Direction.NORTH) {
             if (deltaY > 0 && abs(deltaX) <= boundaryWidth) {
+                score.changeScore(10);
                 return true;
             }
         } else if (playerDirection == Player.Direction.EAST) {
             if (deltaX < 0 && abs(deltaY) <= boundaryWidth) {
+                score.changeScore(10);
                 return true;
             }
         } else if (playerDirection == Player.Direction.SOUTH) {
             if (deltaY < 0 && abs(deltaX) <= boundaryWidth) {
+                score.changeScore(10);
                 return true;
             }
         } else if (playerDirection == Player.Direction.WEST) {
             if (deltaX > 0 && abs(deltaY) <= boundaryWidth) {
+                score.changeScore(10);
                 return true;
             }
         }

@@ -11,7 +11,7 @@ public class GetMetodTest {
 	
 	int playerx =5,playery=7,enemyx=6,enemyy=8;
 	GameScreen gameScreen = new GameScreen(playerx,playery,enemyx,enemyy);	
-	Score score= new Score(100);
+	Score score= new Score();
 	Player actor = new Player(10,20);
 	
 	
@@ -67,6 +67,7 @@ public class GetMetodTest {
 	}
 	@Test
 	public void getScoreTest() {
+		score.changeScore(100);
 		int s = score.getPlayerScore();
 		assertEquals(100,s);
 	}
